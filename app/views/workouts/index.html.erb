@@ -1,1 +1,6 @@
 <h1>This is the Workouts</h1>
+
+<% @workouts.each do |work| %>
+  <h2><%= link_to work.date.to_s(:long), workout_path(work) %></h2>
+  <h3><%= work.workout  %></h3>
+<% end %>
